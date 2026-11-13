@@ -58,6 +58,8 @@ Además, en la carpeta hay varias versiones de cada foto (`plano-2_v1.png`, `pla
 
 ![Storyboard real del reel del pez óscar](docs/img/storyboard-pez-oscar.png)
 
+El título grande del storyboard ("Pez Óscar Albino Cobre") es el nombre del producto que escribe el guion. El nombre del reel (`pez-oscar-cobre-angulos-distintos`) es el que le puse yo al crearlo. Es el mismo reel: el plano 1 coincide con la respuesta de arriba.
+
 ## Resultado
 
 | | Antes | Después |

@@ -9,7 +9,7 @@
   - qué demostrar.
 
   La IA escribió el código bajo esas reglas, y yo revisé el resultado y lo probé con la app real.
-- **Revisión:** un segundo agente de IA revisó el código por separado y con pruebas reales. Encontró 7 problemas y todos se corrigieron. El detalle está en [BITACORA.md](BITACORA.md).
+- **Revisión:** otros agentes de IA revisaron el trabajo por separado y con pruebas reales, en tres rondas: el código (7 problemas), el repositorio antes de publicarlo (9 problemas) y el repositorio publicado contra la pauta del profesor. Todo lo encontrado se corrigió, y el detalle está en [BITACORA.md](BITACORA.md).
 - **Modelo de la demostración:** `opencode/big-pickle`, el modelo gratis de opencode. También probé NVIDIA (build.nvidia.com), pero con herramientas tardaba más de 6 minutos por pedido.
 - **Base:** el [mcp-starter-kit](https://github.com/Maurichilean3d/mcp-starter-kit) del curso, con licencia MIT.
 - Ningún resultado de este repositorio es simulado. Las salidas de [DEMO.md](DEMO.md) y de la bitácora se copiaron de la terminal.
@@ -36,8 +36,8 @@
   - Las dos que abren ventanas están marcadas como no destructivas (`destructiveHint: false`) y repetibles sin efecto extra (`idempotentHint: true`).
   - `gasto_modal` está marcada con `openWorldHint: true`, porque la app le consulta a Modal por internet.
   - Mis 6 herramientas no ejecutan comandos del sistema: solo le hablan a la API local de la app y leen carpetas.
-  - Las 2 herramientas de ejemplo del kit (`listar_aplicaciones` y `abrir_aplicacion`) sí abren apps, con `execFile` y sin shell, tal como vienen del profesor.
+  - Las 2 herramientas de ejemplo del kit (`listar_aplicaciones` y `abrir_aplicacion`), que podían abrir cualquier app del computador, quedaron desactivadas (`src/tools/_aplicaciones.ts`). El MCP expone solo las 6 propias.
 - **Entradas revisadas.** zod valida cada parámetro antes de usarlo. El ID de un reel tiene que calzar con un formato fijo (`AAAA-MM-DD_HHMM_titulo`), así que no se puede pedir una ruta como `../../` para leer otros archivos. Un texto sin letras, como `???`, se rechaza.
 - **El MCP solo se conecta a la app local.** Por defecto habla únicamente con `http://127.0.0.1:8895`. La única salida a internet es indirecta: para el gasto del mes, la app le pregunta a Modal.
 - **App propia.** Director de Reels es mi propia aplicación y tengo su código. No se conectó ninguna app de terceros, ni se saltó ninguna licencia.
-- **Sin datos personales.** Los reels son contenido de productos (peces, joyas). No hay datos de clientes.
+- **Sin datos personales.** Los reels son contenido de productos (peces, joyas). No hay datos de clientes. Los 2 reels de `ejemplo/` solo traen su `meta.json` y su storyboard; se dejaron fuera las fotos de referencia originales.

@@ -24,7 +24,7 @@ Autor: Max Deik. Hecho a partir del [mcp-starter-kit](https://github.com/Maurich
 | `abrir_carpeta_reel` | Abre en el Finder la carpeta del reel | Abre una ventana |
 | `gasto_modal` | Dice cuánto se ha gastado este mes en Modal, el servicio que genera las fotos | No, solo lee (la app le consulta a Modal por internet) |
 
-El kit trae además dos herramientas de ejemplo del profesor (`listar_aplicaciones` y `abrir_aplicacion`), que se dejaron tal cual.
+Las dos herramientas de ejemplo del kit (`listar_aplicaciones` y `abrir_aplicacion`) quedaron **desactivadas** (archivo `src/tools/_aplicaciones.ts`; el kit ignora los archivos que empiezan con `_`). Podían abrir cualquier app del computador y este MCP no las necesita, así que los permisos quedan acotados a las 6 herramientas de arriba.
 
 **Lo que este MCP no hace a propósito:** crear guiones ni fotos. Esas acciones cuestan dinero (Gemini y Modal), y lo que cuesta dinero no se le deja decidir a un modelo.
 
@@ -56,7 +56,7 @@ El MCP no hace clics ni toca el código de la app. Le habla a la API HTTP que la
    npm install
    npm run build
    ```
-3. Corre la prueba de humo del kit. Debe terminar con `Prueba de humo superada.`:
+3. Corre la prueba de humo del kit. Debe decir `OK: 6 herramientas` y terminar con `Prueba de humo superada.`:
    ```bash
    npm test
    ```
@@ -72,7 +72,15 @@ El MCP no hace clics ni toca el código de la app. Le habla a la API HTTP que la
 
 ### Si no tienes la app Director de Reels
 
-La app es mía y no está en este repositorio, así que sin ella:
+La app es mía y no está en este repositorio. Para que igual puedas ver el MCP con datos reales, la carpeta `ejemplo/reels-creados/` trae **2 reels reales** del Director (su `meta.json` y su storyboard, con fotos achicadas):
+
+```bash
+DIRECTOR_REELS_DIR=./ejemplo/reels-creados npm run probar-director
+```
+
+Con eso, `listar_reels` muestra los 2 reels con su título, planos, fotos y costo, y el storyboard se puede abrir a mano en `ejemplo/reels-creados/<reel>/storyboard/storyboard.html`. Las herramientas que necesitan la app responden *"El Director de Reels esta apagado"*, y la prueba termina diciendo cuántas fallaron por eso. Para opencode: `DIRECTOR_REELS_DIR=./ejemplo/reels-creados opencode`.
+
+En resumen, sin la app:
 
 | Paso | ¿Se puede repetir? |
 |---|---|
@@ -81,6 +89,20 @@ La app es mía y no está en este repositorio, así que sin ella:
 | 5 (opencode) | El MCP aparece conectado; las respuestas dirán que la app está apagada |
 
 Este repositorio sirve además como ejemplo de cómo conectar un MCP a cualquier app con una API HTTP local: se cambia `DIRECTOR_URL` y las rutas que llama `src/tools/director_reels.ts`.
+
+### Archivos heredados del kit
+
+Este repositorio parte del kit del profesor y conserva sus archivos, por si alguien quiere crear otro MCP desde aquí. **Para usar este MCP no hacen falta:**
+
+| Archivo o carpeta | Qué es |
+|---|---|
+| `Iniciar.command`, `Iniciar.bat`, `install.sh`, `install.ps1`, `instalador/` | Instaladores y menú del kit (Mac y Windows) |
+| `constructor/` | Constructor web del kit para crear MCPs |
+| `templates/`, `scripts/new-tool.mjs` | Plantilla para agregar herramientas nuevas |
+| `docs/` (salvo `docs/img/`) | Guías del kit; su README original está en `docs/KIT-ORIGINAL-README.md` |
+| `src/tools/_ejemplo.ts`, `src/tools/_aplicaciones.ts` | Herramientas de ejemplo del kit, desactivadas |
+
+Lo propio de este MCP: `src/tools/director_reels.ts`, `scripts/probar-director.mjs`, `ejemplo/` y los documentos de la raíz.
 
 ### Configuración opcional
 

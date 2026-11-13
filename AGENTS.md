@@ -1,6 +1,6 @@
 # Reglas del proyecto (para opencode y otros agentes)
 
-Este repositorio es una plantilla para construir un servidor **MCP** (Model Context Protocol) en TypeScript, usando el SDK oficial `@modelcontextprotocol/sdk`. Responde siempre en **español**.
+Este repositorio es el MCP **director-de-reels**, hecho desde la plantilla del mcp-starter-kit para construir un servidor **MCP** (Model Context Protocol) en TypeScript, usando el SDK oficial `@modelcontextprotocol/sdk`. Responde siempre en **español**.
 
 ## Estructura
 

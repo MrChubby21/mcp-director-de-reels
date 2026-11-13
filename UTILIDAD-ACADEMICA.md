@@ -14,6 +14,6 @@
 
 - `npm test` → `Prueba de humo superada.` y `npm run probar-director` → `Prueba del Director superada.`: 9 llamadas a las 6 herramientas, todas OK contra la app encendida.
 - Desde opencode, el pedido *"¿Qué reels tengo? Muéstrame los 3 más recientes"* respondió en 12 s con los títulos reales. El pedido *"Abre el storyboard del pez oscar…"* usó `abrir_storyboard` y `ver_reel` y abrió el storyboard en 12 s.
-- Listar los reels pasó de **2 min 35 s** (primera versión, que leía los 372 archivos que había el 10-nov desde iCloud) a **menos de 1 s** (versión actual, que busca por el nombre de la carpeta).
+- Mejora del propio MCP: en su primera versión, listar los reels tardaba **2 min 35 s** (leía los 372 archivos que había el 10-nov desde iCloud); la versión actual busca por el nombre de la carpeta y tarda **menos de 1 s**.
 
 El detalle de cada prueba está en [BITACORA.md](BITACORA.md) y el caso completo en [DEMO.md](DEMO.md).

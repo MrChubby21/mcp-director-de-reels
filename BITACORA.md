@@ -35,7 +35,7 @@ Encontró 7 problemas. Todos quedaron corregidos en el código:
 7. Las descripciones no decían *cuándo* usar cada herramienta. Ahora lo dicen.
 
 ### Pruebas reales (con la app abierta)
-- `npm run probar-director` (prueba propia, `scripts/probar-director.mjs`) → 6/6 OK · `Prueba del Director superada.`
+- `npm run probar-director` (prueba propia, `scripts/probar-director.mjs`) → 6/6 llamadas OK · `Prueba del Director superada.` (Ese día la prueba llamaba a 3 herramientas; desde el 13-nov llama a las 6, ver sección 6.)
 - Con la app cerrada (`DIRECTOR_URL=…:8899`): las herramientas responden "está apagado" en unos 15 ms, sin colgarse. `listar_reels` sigue funcionando porque lee el disco.
 - **Desde opencode, en lenguaje natural** (modelo gratis `big-pickle`):
   - Pedido: *"¿Qué reels tengo? Muéstrame los 3 más recientes"*. Llamó a `director-de-reels_listar_reels {"limite":3}` y respondió en 12 s con los títulos reales.
@@ -100,3 +100,7 @@ El Constructor terminó todas sus etapas (`preparar → analizar → revisar →
   9. A la utilidad académica le faltaba respaldo para un ejemplo; está abajo.
 - Respaldo del ejemplo de la utilidad académica: el 10-nov, revisando los storyboards del pez óscar, noté que el pez salía en la misma pose en todos los planos y que tres planos eran muy parecidos. Se corrigió en la app: cada plano con pose y ángulo distintos. El reel `2026-11-10_1706_pez-oscar-cobre-angulos-distintos` es el resultado, y es el que aparece en `DEMO.md`.
 
+- Corrección contra la pauta del profesor (otro agente, Fable, con el repositorio ya publicado): nota estimada 4,3 de 5. Cambios hechos:
+  - Carpeta `ejemplo/reels-creados/` con 2 reels reales (`meta.json` y storyboard, fotos achicadas a 640 px, sin las fotos de referencia), para que otra persona vea datos sin tener la app. Prueba: `DIRECTOR_URL=http://127.0.0.1:8899 DIRECTOR_REELS_DIR=./ejemplo/reels-creados` → `listar_reels` devuelve los 2 reels con título, planos, fotos y costo.
+  - Herramientas de ejemplo del kit desactivadas (`src/tools/_aplicaciones.ts`), porque podían abrir cualquier app. `npm test` → `OK: 6 herramientas -> estado_director, listar_reels, ver_reel, abrir_storyboard, abrir_carpeta_reel, gasto_modal` · `Prueba de humo superada.`
+  - README con la sección de archivos heredados del kit; aclaraciones en la demo, la utilidad académica y la declaración.
