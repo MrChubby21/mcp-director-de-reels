@@ -24,7 +24,8 @@
     "instalar-ia": "node scripts/instalar-opencode.mjs && node scripts/configurar-ia.mjs",
     "setup": "node instalador/setup.mjs",
     "construir-instaladores": "node instalador/construir.mjs",
-    "diagnostico": "node scripts/diagnostico.mjs"
+    "diagnostico": "node scripts/diagnostico.mjs",
+    "probar-director": "node scripts/probar-director.mjs"
   },
   "keywords": [
     "mcp",
