@@ -23,7 +23,7 @@
    Para otra app con API HTTP local, se puede usar como plantilla cambiando `DIRECTOR_URL` y las rutas.
 2. **Solo probado en macOS.** Las herramientas que abren ventanas usan el Finder y el navegador del Mac.
 3. **Abrir no es lo mismo que confirmar.** `abrir_storyboard` y `abrir_carpeta_reel` le piden a la app que abra la ventana, pero la app no confirma que se abrió. Por eso responden "le pedí al Director abrir…". Si la app lleva días encendida, puede dejar de abrir el navegador, y se arregla reabriéndola.
-4. **La búsqueda por palabras puede elegir otro reel.** Si varias carpetas calzan, toma la más reciente que tenga storyboard y avisa cuántas más calzaban. Para elegir una exacta, se usa el ID.
+4. **La búsqueda por palabras puede elegir otro reel.** Si varias carpetas calzan, toma la más reciente que tenga storyboard y avisa cuántas más calzaban. Para elegir una exacta, se usa el ID. Además, con un pedido corto como *"abre el storyboard del pez oscar"*, el modelo a veces pregunta cuál de los reels abrir en vez de elegir; pasó 1 vez en 4 pruebas del 13-nov. Decir *"el más reciente"* lo evita.
 5. **La app se apaga si se cierra su ventana.** Hay que minimizarla, no cerrarla.
 6. **El modelo gratis puede ser lento o fallar.** El MCP no depende del modelo: `npm run probar-director` prueba las herramientas sin IA.
 

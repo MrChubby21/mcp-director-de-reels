@@ -4,6 +4,12 @@
 
 Las salidas de abajo son reales: se copiaron de la terminal el 13-nov-2026, con la app Director de Reels encendida y opencode con el modelo gratis `opencode/big-pickle`.
 
+## Video
+
+[docs/video/demo-opencode.mp4](docs/video/demo-opencode.mp4) (35 s, sin cortes ni edición más que recortar el inicio y el final). Es una grabación de pantalla de la Terminal con los dos pedidos, en la que se ve cómo el storyboard se abre en el navegador entre medio. En el video, el segundo pedido dice *"el reel más reciente del pez oscar"*: en una toma anterior, con el pedido corto, el modelo preguntó cuál de los 4 reels del pez abrir en vez de elegir uno (ver límites en la declaración).
+
+![Final del video: las herramientas que llamó la IA y su respuesta](docs/img/demo-opencode.png)
+
 ## Antes (sin el MCP)
 
 Había que hacerlo a mano en el Finder:

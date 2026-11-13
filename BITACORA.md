@@ -104,3 +104,7 @@ El Constructor terminó todas sus etapas (`preparar → analizar → revisar →
   - Carpeta `ejemplo/reels-creados/` con 2 reels reales (`meta.json` y storyboard, fotos achicadas a 640 px, sin las fotos de referencia), para que otra persona vea datos sin tener la app. Prueba: `DIRECTOR_URL=http://127.0.0.1:8899 DIRECTOR_REELS_DIR=./ejemplo/reels-creados` → `listar_reels` devuelve los 2 reels con título, planos, fotos y costo.
   - Herramientas de ejemplo del kit desactivadas (`src/tools/_aplicaciones.ts`), porque podían abrir cualquier app. `npm test` → `OK: 6 herramientas -> estado_director, listar_reels, ver_reel, abrir_storyboard, abrir_carpeta_reel, gasto_modal` · `Prueba de humo superada.`
   - README con la sección de archivos heredados del kit; aclaraciones en la demo, la utilidad académica y la declaración.
+- Video de la demostración (`docs/video/demo-opencode.mp4`, 35 s) y captura (`docs/img/demo-opencode.png`), grabados con `screencapture -v` de la ventana de Terminal y recortados con ffmpeg. Hubo tres tomas:
+  - En la primera, la ventana del navegador tapó la respuesta; se agregó traer la Terminal al frente al terminar.
+  - En la segunda, con el pedido corto, el modelo preguntó cuál de los 4 reels del pez abrir. Quedó declarado como límite.
+  - La tercera, con *"el reel más reciente del pez oscar"*, llamó a `listar_reels`, `ver_reel` y `abrir_storyboard` y respondió los 5 movimientos.
