@@ -70,7 +70,7 @@ El MCP no hace clics ni toca el código de la app. Le habla a la API HTTP que la
    ```bash
    npm run probar-director
    ```
-5. Abre opencode en esta carpeta. El archivo `opencode.json` ya registra el MCP con el nombre `director-de-reels`:
+5. Abre opencode en esta carpeta. El archivo `opencode.json` ya registra el MCP con el nombre `director-de-reels` y le niega a la IA los comandos de terminal, la edición de archivos y la web (`permission`), así que solo puede usar las herramientas del MCP:
    ```bash
    opencode
    ```
@@ -92,7 +92,7 @@ En resumen, sin la app:
 |---|---|
 | 1 a 3 (`npm install`, `npm run build`, `npm test`) | Sí, completos |
 | 4 (`npm run probar-director`) | Corre, pero las herramientas que usan la API responden *"El Director de Reels esta apagado"* y la prueba termina diciendo cuántas fallaron. Así se comprueba que el MCP no se cuelga sin la app |
-| 5 (opencode) | El MCP aparece conectado; las respuestas dirán que la app está apagada |
+| 5 (opencode) | El MCP aparece conectado. Con la carpeta de ejemplo, `listar_reels` responde con los 2 reels; las demás herramientas dicen que la app está apagada |
 
 Este repositorio sirve además como ejemplo de cómo conectar un MCP a cualquier app con una API HTTP local: se cambia `DIRECTOR_URL` y las rutas que llama `src/tools/director_reels.ts`.
 

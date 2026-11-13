@@ -109,3 +109,10 @@ El Constructor terminó todas sus etapas (`preparar → analizar → revisar →
   - En la segunda, con el pedido corto, el modelo preguntó cuál de los 4 reels del pez abrir. Quedó declarado como límite.
   - La tercera, con *"el reel más reciente del pez oscar"*, llamó a `listar_reels`, `ver_reel` y `abrir_storyboard` y respondió los 5 movimientos.
 - Utilidad académica reescrita y amarrada a **Marketing II (ECM321)**, por decisión del estudiante: el MCP se va a usar en ese ramo. Usa conceptos del Reading Test 4 del ramo: plan IMC (pasos 3 y 7), creative brief, A/B testing y CPA. El uso futuro quedó marcado como plan y no como algo ya hecho, con la regla del ramo de que la IA requiere permiso del profesor. Se comprobó imprimiéndola a PDF: cabe en 1 página.
+- Segunda corrección de Fable: 4,75 de 5. Cambios hechos:
+  - **Revisión real con el MCP para Marketing II.** Pedido: revisar el reel más reciente del pez óscar como en el paso 3 del plan IMC (objetivo, coherencia, plano más débil).
+    - Primera vez, sin restricciones: la IA llamó a `listar_reels` y `ver_reel`, pero además usó comandos de terminal de opencode (`ls`, `find`, `python3`) para leer archivos por su cuenta (145 s).
+    - Se agregó `"permission": {"edit": "deny", "bash": "deny", "webfetch": "deny"}` a `opencode.json`.
+    - Segunda vez: solo `listar_reels`, `estado_director` y `ver_reel`, en 19 s.
+    - Las dos veces concluyó lo mismo: objetivo "deseo", los 5 planos son coherentes y el plano 5 es el más débil (el pez está quieto y el foco pasa a las burbujas).
+  - Tiempos y llamadas del video calzados con DEMO y la utilidad académica. El README aclara qué responde opencode con la carpeta de ejemplo. La declaración menciona el nombre de usuario visible en el video.

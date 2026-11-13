@@ -6,7 +6,7 @@ Las salidas de abajo son reales: se copiaron de la terminal el 13-nov-2026, con 
 
 ## Video
 
-[docs/video/demo-opencode.mp4](docs/video/demo-opencode.mp4) (35 s, sin cortes ni edición más que recortar el inicio y el final). Es una grabación de pantalla de la Terminal con los dos pedidos, en la que se ve cómo el storyboard se abre en el navegador entre medio. En el video, el segundo pedido dice *"el reel más reciente del pez oscar"*: en una toma anterior, con el pedido corto, el modelo preguntó cuál de los 4 reels del pez abrir en vez de elegir uno (ver límites en la declaración).
+[docs/video/demo-opencode.mp4](docs/video/demo-opencode.mp4) (35 s, sin cortes ni edición más que recortar el inicio y el final). Es una grabación de pantalla de la Terminal con los dos pedidos, en la que se ve cómo el storyboard se abre en el navegador entre medio. En el video, el segundo pedido dice *"el reel más reciente del pez oscar"*: en una toma anterior, con el pedido corto, el modelo preguntó cuál de los 4 reels del pez abrir en vez de elegir uno (ver límites en la declaración). Con el pedido largo, en el video la IA llama a tres herramientas: `listar_reels {"buscar":"oscar"}`, y después `ver_reel` y `abrir_storyboard` con el ID completo del reel. Tarda unos 20 s, porque el navegador se abre entre medio.
 
 ![Final del video: las herramientas que llamó la IA y su respuesta](docs/img/demo-opencode.png)
 
@@ -29,7 +29,7 @@ Además, en la carpeta hay varias versiones de cada foto (`plano-2_v1.png`, `pla
 
 **Qué ejecutó el MCP:** `director-de-reels_listar_reels {"limite":3}`
 
-**Qué respondió (12 s):**
+**Qué respondió (12 s en esta toma escrita; unos 5 s en el video):**
 
 > Tienes 374 reels en total. Los 3 más recientes:
 >
@@ -47,7 +47,7 @@ Además, en la carpeta hay varias versiones de cada foto (`plano-2_v1.png`, `pla
 
 **Qué ejecutó el MCP:** `director-de-reels_abrir_storyboard {"reel":"pez oscar"}` y `director-de-reels_ver_reel {"reel":"pez oscar"}`
 
-**Qué respondió (12 s):**
+**Qué respondió (12 s en esta toma escrita):**
 
 > Storyboard abierto en el navegador: `2026-11-10_1706_pez-oscar-cobre-angulos-distintos`.
 >
