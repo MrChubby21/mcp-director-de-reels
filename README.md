@@ -1,154 +1,117 @@
-# MCP Starter Kit
+# MCP Director de Reels
 
-Plantilla para construir tu propio **servidor MCP** (Model Context Protocol) en TypeScript y conectarlo a **opencode** (o Claude Desktop, Cursor, etc.).
+Un servidor **MCP** (Model Context Protocol) que conecta una IA (opencode, Claude Desktop, Cursor…) con **Director de Reels**, la app que construí en el Certamen 2 del ramo *ChatGPT y Tecnologías de IAG para el Trabajo Académico* (UDD, CTR20233).
 
-Con un MCP, un modelo de IA puede usar *herramientas* que tú defines: abrir una app de tu computador, leer tus notas, llamar a una API, controlar música… lo que se te ocurra.
+Director de Reels arma el guion de un reel plano por plano y crea una foto por plano. Con este MCP, en vez de buscar carpetas a mano, le pido a la IA en lenguaje natural: *"¿qué reels tengo?"*, *"ábreme el storyboard del pez oscar"* o *"¿cuánto llevo gastado este mes?"*.
 
-## ⚡ Empezar (Windows y Mac, sin escribir comandos complicados)
+Autor: Max Deik. Hecho a partir del [mcp-starter-kit](https://github.com/Maurichilean3d/mcp-starter-kit) del curso (rama `main`, licencia MIT).
 
-### Opción recomendada: pegar UNA línea en la terminal
-
-Descarga e instala todo sin que Windows ni macOS muestren alertas de "archivo peligroso" (esas alertas solo aparecen en archivos bajados con el navegador).
-
-**Windows** — abre *PowerShell* (menú Inicio → escribe `PowerShell`) y pega:
-
-```powershell
-irm https://raw.githubusercontent.com/Maurichilean3d/mcp-starter-kit/main/install.ps1 | iex
-```
-
-**Mac (Apple Silicon o Intel)** — abre *Terminal* (Cmd+Espacio → `Terminal`) y pega:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/Maurichilean3d/mcp-starter-kit/main/install.sh | bash
-```
-
-Esto copia el kit a tu carpeta de usuario (`mcp-starter-kit`) y abre el instalador. Es seguro revisar antes lo que hace: son los archivos `install.ps1` / `install.sh` de este mismo repositorio.
-
-### Opción alternativa: descargar el ZIP
-
-1. En esta página pulsa el botón verde **Code → Download ZIP** y descomprímelo (en Windows: clic derecho → *Extraer todo...*; no lo ejecutes desde dentro del `.zip`).
-2. Haz doble clic en el archivo de entrada:
-
-| Windows | macOS |
+| Documento | Qué tiene |
 |---|---|
-| `Iniciar.bat` | `Iniciar.command` |
+| [UTILIDAD-ACADEMICA.md](UTILIDAD-ACADEMICA.md) | Qué problema resuelve, para quién y en qué dimensión del aprendizaje aporta (1 página) |
+| [DEMO.md](DEMO.md) | Caso real, antes y después, con lo que se pidió y lo que respondió |
+| [DECLARACION-IA-Y-SEGURIDAD.md](DECLARACION-IA-Y-SEGURIDAD.md) | Uso de IA, límites conocidos y seguridad |
+| [BITACORA.md](BITACORA.md) | Trazabilidad: cada paso con su comando, la salida real y los errores resueltos |
 
-Como el ZIP viene del navegador, el sistema puede mostrar un aviso la primera vez:
-- **Windows:** *"Windows protegió su PC"* → **Más información → Ejecutar de todas formas**.
-- **Mac:** *"…podría ser peligroso"* o *"no se puede abrir"*. Abre **Terminal** y pega (cambia la ruta si lo descomprimiste en otro sitio):
-  ```bash
-  xattr -dr com.apple.quarantine ~/Downloads/mcp-starter-kit-main
-  bash ~/Downloads/mcp-starter-kit-main/Iniciar.command
-  ```
-  Con `bash …` también se evita el error *"permiso denegado"* del ZIP de GitHub. La alerta desaparece del todo solo si el archivo está firmado con una cuenta de desarrollador de Apple de pago, que este proyecto no tiene.
+## Herramientas
 
-### Qué hace
+| Herramienta | Qué hace | ¿Cambia algo? |
+|---|---|---|
+| `estado_director` | Revisa si la app está abierta, si tiene clave para guiones y si el motor de fotos está disponible | No, solo lee |
+| `listar_reels` | Lista los reels del más nuevo al más viejo (título, fecha, planos, fotos, costo). Filtra por palabras del título | No, solo lee |
+| `ver_reel` | Muestra el guion de un reel plano por plano: tiempo, tipo de plano, movimiento y foto actual | No, solo lee |
+| `abrir_storyboard` | Abre en el navegador el storyboard del reel (una foto por plano) | Abre una ventana |
+| `abrir_carpeta_reel` | Abre en el Finder la carpeta del reel | Abre una ventana |
+| `gasto_modal` | Dice cuánto se ha gastado este mes en Modal, el servicio que genera las fotos | No, solo lee |
 
-El programa te va preguntando `[S/N]` antes de instalar lo que falte (**Node.js**, **opencode**, **Antigravity**), prepara el MCP y abre un menú:
+El kit trae además dos herramientas de ejemplo del profesor (`listar_aplicaciones` y `abrir_aplicacion`), que se dejaron tal cual.
 
-1. Crear un MCP para una app de tu equipo (Constructor automático)
-2. Abrir opencode con el MCP del kit
-3. Abrir Antigravity con el MCP del kit
-4. Conectar o cambiar la IA (NVIDIA / OpenRouter / ninguna) — ver [guía 9](docs/09-instalar-ia-nvidia-openrouter-agy.md)
-4. Diagnóstico (si algo falla: crea `diagnostico.txt` para enviarlo a quien te ayuda)
+**Lo que este MCP no hace a propósito:** crear guiones ni fotos. Esas acciones cuestan dinero (Gemini y Modal), y lo que cuesta dinero no se le deja decidir a un modelo.
 
-La primera vez tarda un par de minutos; después abre al instante.
-
-¿Prefieres git? `git clone https://github.com/Maurichilean3d/mcp-starter-kit.git` y luego el mismo archivo de entrada (con git tampoco aparecen alertas).
-
-**Mac Intel vs Apple Silicon:** es el mismo archivo `Iniciar.command` para los dos; detecta solo si tu Mac es Intel o Apple Silicon (M1/M2/M3…) y descarga la versión de Node.js que corresponde, **sin pedir contraseña de administrador** (queda en `~/.mcp-starter-kit/node`). opencode se instala con `npm`; si falla por permisos se instala en tu carpeta de usuario (`~/.local`), y como último recurso con el instalador oficial. Cada MCP que crees trae su doble clic **`Abrir-<nombre>.command`** (Mac) / **`Abrir-<nombre>.bat`** (Windows), que abre la app y opencode con el MCP a la vez, y **`Cerrar-<nombre>`** para cerrarlos.
-
-Más detalle y solución de problemas: [docs/00-instalacion-windows-mac.md](docs/00-instalacion-windows-mac.md) y [docs/06-depuracion.md](docs/06-depuracion.md). El constructor automático (con sus **advertencias de seguridad**): [docs/07-constructor-automatico.md](docs/07-constructor-automatico.md).
-
-## Inicio rápido con la terminal (cualquier sistema)
-
-Requisitos: [Node.js 18+](https://nodejs.org) y [opencode](https://opencode.ai).
-
-```bash
-git clone https://github.com/TU-USUARIO/mcp-starter-kit.git mi-mcp
-cd mi-mcp
-npm install
-npm run build
-npm test            # debe terminar con "Prueba de humo superada."
-```
-
-Luego abre opencode **en esta misma carpeta** (`opencode`). El archivo `opencode.json` ya registra el MCP. Pregúntale:
-
-> *"Usa la herramienta saludar para saludar a Ana"*  
-> *"Lista mis aplicaciones instaladas y abre la calculadora"*
-
-## Qué incluye
+## Cómo funciona
 
 ```
-install.ps1 / install.sh        Instalacion por una linea de terminal (sin alertas del sistema)
-Iniciar.bat / Iniciar.command   Punto de entrada unico (Windows / Mac): instala lo que falte y abre el menu
-instalador/             Programa que hace la instalacion y el menu (setup.mjs) + generador de instaladores
-constructor/            App web local que hace que opencode construya un MCP por ti
-src/
-  index.ts              Arranque del servidor (carga src/tools/ automáticamente)
-  tools/
-    ejemplo.ts          Herramientas mínimas: hora_actual, saludar
-    aplicaciones.ts     Ejemplo real: listar y abrir apps (macOS/Windows/Linux)
-  lib/
-    exec.ts             Ejecutar programas de forma segura
-    respuestas.ts       Helpers: texto(), json(), error()
-templates/
-  tool.template.ts      Plantilla de herramienta nueva
-  PROMPT_PARA_OPENCODE.md   Prompt listo para que opencode construya tu MCP
-scripts/
-  new-tool.mjs          Generador de herramientas
-  smoke-test.mjs        Prueba automática
-  configurar-opencode.mjs   Registra el MCP en opencode con ruta absoluta
-  asegurar-clis.mjs     Detecta/instala opencode y Antigravity (pide permiso)
-  diagnostico.mjs       Revisa Node, npm, opencode, internet... y crea diagnostico.txt
-  lanzar.mjs            Abre opencode o Antigravity con el MCP
-docs/                   Guías paso a paso (léelas en orden)
-AGENTS.md               Reglas que opencode lee automáticamente
-opencode.json           Registro del MCP en opencode
+Tú  →  opencode (IA)  →  este MCP (stdio)  →  API local del Director (http://127.0.0.1:8895)
+                                           →  carpeta reels-creados/ (solo lectura)
 ```
 
-## Crear tu propio MCP
+El MCP no hace clics ni toca el código de la app. Le habla a la API HTTP que la app ya tenía. Es la vía más robusta según la guía del kit: API, luego línea de comandos, luego archivos, luego AppleScript, y la interfaz al final.
 
-**Camino A — a mano**
+## Requisitos
 
-```bash
-npm run new-tool -- crear_nota     # crea src/tools/crear_nota.ts
-# edita el archivo, luego:
-npm run build
+- **macOS** (las herramientas que abren ventanas usan el Finder y el navegador del Mac).
+- **Node.js 20 o superior** y **npm**.
+- **La app Director de Reels encendida** en el mismo computador (servidor en el puerto 8895). Sin la app, `listar_reels` igual funciona si existe la carpeta de reels, y las demás herramientas responden "el Director está apagado" sin colgarse.
+- Un cliente MCP: [opencode](https://opencode.ai) (es el que se usó), Claude Desktop, Cursor u otro.
+
+## Instalación paso a paso
+
+1. Descarga el repositorio:
+   ```bash
+   git clone https://github.com/MrChubby21/mcp-director-de-reels.git
+   cd mcp-director-de-reels
+   ```
+2. Instala y compila:
+   ```bash
+   npm install
+   npm run build
+   ```
+3. Corre la prueba de humo del kit. Debe terminar con `Prueba de humo superada.`:
+   ```bash
+   npm test
+   ```
+4. Abre la app Director de Reels y corre la prueba real. Llama a las 6 herramientas contra la app encendida y debe terminar con `Prueba del Director superada.`:
+   ```bash
+   npm run probar-director
+   ```
+5. Abre opencode en esta carpeta. El archivo `opencode.json` ya registra el MCP con el nombre `director-de-reels`:
+   ```bash
+   opencode
+   ```
+   Si quieres usar el modelo gratis con el que se probó: `opencode -m opencode/big-pickle`.
+
+### Configuración opcional
+
+| Variable | Para qué | Valor por defecto |
+|---|---|---|
+| `DIRECTOR_URL` | Dirección del servidor del Director | `http://127.0.0.1:8895` |
+| `DIRECTOR_REELS_DIR` | Carpeta donde el Director guarda los reels | `~/Desktop/Proyectos/Reels/director-de-reels/reels-creados` |
+
+### Usarlo desde Claude Desktop u otro cliente
+
+Agrega esto a la configuración MCP del cliente, con la ruta absoluta a tu carpeta:
+
+```json
+{
+  "mcpServers": {
+    "director-de-reels": {
+      "command": "node",
+      "args": ["/ruta/a/mcp-director-de-reels/dist/index.js"]
+    }
+  }
+}
 ```
 
-Reinicia opencode y tu herramienta aparece sola. No hay que registrar nada.
+## Ejemplos de uso
 
-**Camino B — con ayuda de opencode (recomendado para apps)**
-
-Abre `templates/PROMPT_PARA_OPENCODE.md`, elige la app de tu computador, completa el prompt y pégalo en opencode. Gracias a `AGENTS.md`, opencode ya conoce las reglas del proyecto.
-
-## Guías
-
-0. [Instalación y primer uso (Windows y macOS)](docs/00-instalacion-windows-mac.md)
-1. [Conceptos: qué es MCP](docs/01-conceptos.md)
-2. [Tu primer MCP paso a paso](docs/02-primer-mcp.md)
-3. [Conectar con opencode (y otros clientes)](docs/03-conectar-opencode.md)
-4. [Construir un MCP para una aplicación](docs/04-mcp-para-una-app.md)
-5. [Seguridad y buenas prácticas](docs/05-seguridad.md)
-6. [Depuración y problemas comunes](docs/06-depuracion.md)
-7. [Constructor automático: opencode escribe el MCP por ti](docs/07-constructor-automatico.md)
-9. [Instalar opencode, conectar NVIDIA/OpenRouter y usar agy](docs/09-instalar-ia-nvidia-openrouter-agy.md)
-
-## Comandos
-
-| Comando | Qué hace |
+| Le escribes a la IA | Herramientas que usa |
 |---|---|
-| `npm run setup` | Instala lo que falte y abre el menú (igual que `Iniciar`) |
-| `npm run crear-mcp` | Abre el Constructor automático de MCP |
-| `npm run build` | Compila TypeScript a `dist/` |
-| `npm test` | Compila y verifica que el servidor responde |
-| `npm run inspect` | Abre el MCP Inspector (interfaz visual para probar herramientas) |
-| `npm run new-tool -- nombre` | Crea una herramienta nueva |
-| `npm run configurar` | Registra el MCP en opencode (ruta absoluta) |
-| `npm run configurar:global` | Lo registra para todas las carpetas |
-| `npm run dev` | Ejecuta el servidor directo desde TypeScript |
+| ¿Qué reels tengo? Muéstrame los 3 más recientes | `listar_reels` |
+| Abre el storyboard del pez oscar y dime qué movimiento tiene cada plano | `ver_reel` y `abrir_storyboard` |
+| ¿Tengo algún reel de aros dorados? | `listar_reels` con `buscar` |
+| ¿Cuánto llevo gastado este mes en fotos? | `gasto_modal` |
+| ¿Está lista la app? | `estado_director` |
 
-## Licencia
+## Agregar una herramienta
 
-MIT
+```bash
+npm run new-tool -- nombre_herramienta
+```
+
+Edita el archivo nuevo en `src/tools/`, corre `npm run build` y reinicia el cliente. El kit carga solo todos los archivos de `src/tools/`, menos los que empiezan con `_`.
+
+## Créditos y licencia
+
+- Base: [mcp-starter-kit](https://github.com/Maurichilean3d/mcp-starter-kit) del profesor Mauricio Reyes, licencia MIT. Su README original está en [docs/KIT-ORIGINAL-README.md](docs/KIT-ORIGINAL-README.md), y su documentación en `docs/`.
+- Herramientas del Director, prueba real y documentación: Max Deik, con ayuda de IA (detalle en [DECLARACION-IA-Y-SEGURIDAD.md](DECLARACION-IA-Y-SEGURIDAD.md)).
+- Licencia: MIT (ver [LICENSE](LICENSE)).
