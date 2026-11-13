@@ -108,3 +108,4 @@ El Constructor terminó todas sus etapas (`preparar → analizar → revisar →
   - En la primera, la ventana del navegador tapó la respuesta; se agregó traer la Terminal al frente al terminar.
   - En la segunda, con el pedido corto, el modelo preguntó cuál de los 4 reels del pez abrir. Quedó declarado como límite.
   - La tercera, con *"el reel más reciente del pez oscar"*, llamó a `listar_reels`, `ver_reel` y `abrir_storyboard` y respondió los 5 movimientos.
+- Utilidad académica reescrita y amarrada a **Marketing II (ECM321)**, por decisión del estudiante: el MCP se va a usar en ese ramo. Usa conceptos del Reading Test 4 del ramo: plan IMC (pasos 3 y 7), creative brief, A/B testing y CPA. El uso futuro quedó marcado como plan y no como algo ya hecho, con la regla del ramo de que la IA requiere permiso del profesor. Se comprobó imprimiéndola a PDF: cabe en 1 página.

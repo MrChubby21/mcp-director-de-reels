@@ -1,19 +1,28 @@
 # Utilidad académica
 
-**Qué problema resuelve.** Director de Reels es la app que construí en el Certamen 2 de este ramo para producir reels de marketing: arma el guion plano por plano y crea una foto por plano. Al usarla de verdad, el material creció rápido: hoy hay **374 reels** guardados en carpetas, cada uno con su `meta.json`, sus fotos y su storyboard. Para revisar uno tenía que recorrer carpetas en el Finder, encontrar la correcta por su fecha y abrir el storyboard o leer el JSON. Ese tiempo es operativo, no es aprendizaje.
+**En una frase:** este MCP convierte mi app de reels en un laboratorio para practicar **Marketing II (ECM321)**. La IA me deja revisar cada pieza de comunicación contra los conceptos del ramo, en vez de gastar el tiempo buscando archivos.
 
-**Para quién.** Para mí, estudiante de Ingeniería Comercial que aplica lo que aprende en marketing a emprendimientos reales, y para cualquier persona que produzca contenido con una app propia y necesite revisar y comparar lo que ya generó.
+**Qué problema resuelve.** Director de Reels es la app que construí en el Certamen 2 de este ramo: arma el guion de un reel plano por plano y crea una foto por plano. Ya tiene **374 reels**, cada uno en su carpeta, y revisar uno significaba recorrer carpetas y abrir archivos a mano. Ese tiempo es operativo, no es aprendizaje.
 
-**En qué dimensión del aprendizaje aporta.**
+**Para quién.** Para mí, estudiante de Ingeniería Comercial que cursa Marketing II, y para cualquier estudiante que produzca piezas de comunicación con una app propia y necesite revisarlas con criterio.
 
-1. **Revisión crítica del propio trabajo.** Pregunto *"¿qué movimiento tiene cada plano del reel del pez oscar?"* y la IA me trae el guion plano por plano y me abre el storyboard. El esfuerzo pasa de buscar archivos a juzgar si el guion funciona: si cada plano tiene una acción clara, si hay planos repetidos, si la historia cambia de estado. Ese tipo de revisión es la que, el 10-nov, me hizo notar mirando los storyboards que el pez salía en la misma pose en todos los planos y que tres planos eran muy parecidos. Eso llevó a corregir la app (detalle en la bitácora, sección 6).
-2. **Decisiones con datos.** `listar_reels` muestra el costo de cada reel y `gasto_modal` el gasto del mes. Eso permite comparar costo contra resultado antes de seguir generando: por ejemplo, el último reel costó USD 1,18 y el anterior USD 1,47, y la pregunta pasa a ser si la mejora justifica el gasto.
-3. **Continuidad del proyecto del ramo.** El MCP no es un ejercicio aparte: es la evolución de la herramienta del Certamen 2. Ahí la app producía el material; ahora ese material se puede consultar y revisar en lenguaje natural, que es lo que el ramo busca: usar la IA como herramienta de trabajo, no solo para generar contenido.
+**En qué dimensión del aprendizaje aporta: aplicar la teoría de Marketing II sobre piezas reales.** Uso como marco el plan de marketing integrado (IMC, *Integrated Marketing Communications*) que entra en el Reading Test 4 del ramo:
+
+| Concepto de Marketing II | Cómo lo practico con el MCP |
+|---|---|
+| **Core brand message** (paso 3 del plan IMC): voz, imagen y mensaje consistentes | `ver_reel` me trae el guion plano por plano y reviso si todos los planos cuentan lo mismo y si el producto se mantiene igual. Así, el 10-nov, mirando los storyboards, noté que el pez salía en la misma pose en todos los planos (bitácora, sección 6) |
+| **Creative brief**: objetivo, público y mensaje clave | Cada reel guarda su objetivo (alcance, deseo o acción). Con `ver_reel`, la IA puede contrastar el guion con ese objetivo antes de producir el video |
+| **Track and optimize** (paso 7): medir, A/B testing y costo por adquisición (CPA) | `listar_reels` muestra el costo de producción de cada pieza, y `gasto_modal` el gasto del mes. Ya tengo dos versiones del mismo producto (USD 1,47 y USD 1,18), que sirven como variantes A y B para probar cuál convierte mejor |
+
+**Cómo lo voy a usar en Marketing II.** Esto es un plan, no algo ya hecho:
+
+1. **En los trabajos de video del ramo:** armar el storyboard con el Director y revisarlo plano por plano con el MCP contra el creative brief, antes de grabar.
+2. **Para estudiar:** seguir mi método de estudiar con mis propios proyectos como casos, usando reels reales para explicar IMC, posicionamiento y la P de promoción.
+3. **Para el análisis:** comparar costo y objetivo entre versiones de un mismo reel antes de decidir cuál publicar.
+
+En Marketing II el uso de IA requiere permiso del profesor, así que lo usaré solo en las actividades donde esté autorizado y lo declararé.
 
 **Evidencia de que funciona (datos reales, no simulados).**
 
-- `npm test` → `Prueba de humo superada.` y `npm run probar-director` → `Prueba del Director superada.`: 9 llamadas a las 6 herramientas, todas OK contra la app encendida.
-- Desde opencode, el pedido *"¿Qué reels tengo? Muéstrame los 3 más recientes"* respondió en 12 s con los títulos reales. El pedido *"Abre el storyboard del pez oscar…"* usó `abrir_storyboard` y `ver_reel` y abrió el storyboard en 12 s.
-- Mejora del propio MCP: en su primera versión, listar los reels tardaba **2 min 35 s** (leía los 372 archivos que había el 10-nov desde iCloud); la versión actual busca por el nombre de la carpeta y tarda **menos de 1 s**.
-
-El detalle de cada prueba está en [BITACORA.md](BITACORA.md) y el caso completo en [DEMO.md](DEMO.md).
+- `npm test` y `npm run probar-director` pasan: 6 herramientas y 9 llamadas OK contra la app encendida.
+- En opencode, listar los reels y revisar el guion del pez óscar con su storyboard tomó 12 s cada uno, con datos reales. Está grabado en [docs/video/demo-opencode.mp4](docs/video/demo-opencode.mp4), y el detalle está en [DEMO.md](DEMO.md).

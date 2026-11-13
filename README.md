@@ -4,6 +4,8 @@ Un servidor **MCP** (Model Context Protocol) que conecta una IA (opencode, Claud
 
 Director de Reels arma el guion de un reel plano por plano y crea una foto por plano. Con este MCP, en vez de buscar carpetas a mano, le pido a la IA en lenguaje natural: *"¿qué reels tengo?"*, *"ábreme el storyboard del pez oscar"* o *"¿cuánto llevo gastado este mes?"*.
 
+**Para qué lo uso en la U:** para practicar **Marketing II (ECM321)** con piezas reales. Reviso cada reel contra el plan IMC y el creative brief, y comparo costo y objetivo entre versiones (ver [UTILIDAD-ACADEMICA.md](UTILIDAD-ACADEMICA.md)).
+
 **Demostración en video (35 s, grabada el 13-nov-2026):** [docs/video/demo-opencode.mp4](docs/video/demo-opencode.mp4). Muestra opencode haciendo dos pedidos, el MCP llamando a sus herramientas y el storyboard abriéndose en el navegador.
 
 ![opencode usando el MCP director-de-reels](docs/img/demo-opencode.png)
