@@ -1,0 +1,446 @@
+{
+  "version": 1,
+  "reelId": "2026-11-10_1604_pez-oscar-albino-cobre-se-mueve",
+  "creado": "2026-11-10T19:04:34.633Z",
+  "titulo": "Pez Óscar Albino Cobre se mueve",
+  "objetivo": "deseo",
+  "referencias": [
+    "referencias/ref-1.jpg"
+  ],
+  "elementos": {
+    "locacion": "Acuario plantado de agua dulce, amplio y realista, con sustrato oscuro y agua cristalina.",
+    "persona": "sin persona",
+    "producto": "Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.",
+    "prop": "Rocas volcánicas oscuras y troncos sumergidos en el fondo del acuario.",
+    "detalle": "Burbujas de aire finas ascendiendo por el agua y escamas iridiscentes brillando bajo la luz.",
+    "paleta": "Tonos blancos perlados, cobres vibrantes, naranjas intensos, verdes oscuros de plantas y azul cristalino del agua.",
+    "estilo": "Cámara Sony FX3 con lentes 35 mm y 85 mm macro; Luz cenital cálida y brillante simulando iluminación profesional de acuario; Tema documental de naturaleza y mascotas; Grade natural, alto contraste en los colores del pez, tonos vivos y textura cristalina del agua.",
+    "mantener": "La apariencia exacta del pez óscar albino cobre, el entorno acuático realista y limpio, la iluminación constante y la calidad cinematográfica.",
+    "evitar": "Presencia de personas o manos, deformaciones en el cuerpo del pez, movimientos estáticos o falsos, aberración cromática, textos generados por IA."
+  },
+  "planos": [
+    {
+      "n": 1,
+      "tiempo": "0,0-4,5 s",
+      "tipo": "Plano detalle",
+      "movimiento": "el pez gira hacia cámara",
+      "queSeVe": "El óscar albino cobre muestra sus manchas cobrizas y brilla bajo la luz directa",
+      "actual": "plano-1_v1.png",
+      "intentos": [
+        {
+          "version": 1,
+          "archivo": "plano-1_v1.png",
+          "motor": "qwen",
+          "resultado": "ok",
+          "motivo": "",
+          "inicio": "2026-11-10T19:04:34.699Z",
+          "fin": "2026-11-10T19:08:26.991Z",
+          "segundos": 232,
+          "costoUsd": 0.1611,
+          "nota": "",
+          "dondeAparecio": "carpeta",
+          "ancho": 864,
+          "alto": 1536,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p1_v1_160434",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 1 of 5 (Plano detalle), frozen in the middle of the action.\nNew shot: Vertical 9:16, close-up shot, Sony FX3 with 85mm macro lens, cinematic warm lighting illuminating from above, the fish turns smoothly towards the camera displaying its bright pearl-white body with vibrant orange and copper spots, clear water, natural aquarium background.\nAction (in Spanish), it must be clearly visible: \"el pez gira hacia cámara\".\nWhat we see (in Spanish): \"El óscar albino cobre muestra sus manchas cobrizas y brilla bajo la luz directa\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals or gems on the ground.",
+          "semilla": 142,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": true,
+          "modalSegundos": 102
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "tiempo": "4,5-9,0 s",
+      "tipo": "Plano medio",
+      "movimiento": "las aletas se abren amplias",
+      "queSeVe": "El pez nada tranquilo entre rocas oscuras y plantas acuáticas de fondo",
+      "actual": "plano-2_v3.png",
+      "intentos": [
+        {
+          "version": 1,
+          "archivo": "plano-2_v1.png",
+          "motor": "qwen",
+          "resultado": "ok",
+          "motivo": "",
+          "inicio": "2026-11-10T19:08:27.120Z",
+          "fin": "2026-11-10T19:10:10.446Z",
+          "segundos": 103,
+          "costoUsd": 0.0716,
+          "nota": "",
+          "dondeAparecio": "carpeta",
+          "ancho": 864,
+          "alto": 1536,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p2_v1_160827",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 2 of 5 (Plano medio), frozen in the middle of the action.\nNew shot: Vertical 9:16, medium shot, Sony FX3 with 35mm lens, soft aquarium side lighting, the fish fans its large dorsal and tail fins wide while swimming slowly among dark volcanic rocks, clean green plants in the background.\nAction (in Spanish), it must be clearly visible: \"las aletas se abren amplias\".\nWhat we see (in Spanish): \"El pez nada tranquilo entre rocas oscuras y plantas acuáticas de fondo\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals or gems on the ground.",
+          "semilla": 242,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": false,
+          "modalSegundos": 100.4
+        },
+        {
+          "version": 2,
+          "archivo": null,
+          "motor": "qwen",
+          "resultado": "error",
+          "motivo": "qwen_timeout",
+          "inicio": "2026-11-10T19:16:32.360Z",
+          "fin": "2026-11-10T19:24:32.380Z",
+          "segundos": 480,
+          "costoUsd": 0.3333,
+          "nota": "",
+          "dondeAparecio": "",
+          "ancho": 0,
+          "alto": 0,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p2_v2_161632",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 2 of 5 (Plano medio), frozen in the middle of the action.\nFraming: MEDIUM shot. The whole animal is visible with space around it, filling about half of the frame.\nNew shot: Vertical 9:16, medium shot, Sony FX3 with 35mm lens, soft aquarium side lighting, the fish fans its large dorsal and tail fins wide while swimming slowly among dark volcanic rocks, clean green plants in the background.\nAction (in Spanish), it must be clearly visible: \"las aletas se abren amplias\".\nWhat we see (in Spanish): \"El pez nada tranquilo entre rocas oscuras y plantas acuáticas de fondo\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nKeep the animal's real colors: the light must not tint its body (a white body stays white).\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals, ice cubes or gems on the ground.",
+          "semilla": 243,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": true,
+          "modalSegundos": 0
+        },
+        {
+          "version": 2,
+          "archivo": "plano-2_v2.png",
+          "motor": "qwen",
+          "resultado": "ok",
+          "motivo": "",
+          "inicio": "2026-11-10T19:36:16.178Z",
+          "fin": "2026-11-10T19:37:57.412Z",
+          "segundos": 101,
+          "costoUsd": 0.0701,
+          "nota": "",
+          "dondeAparecio": "carpeta",
+          "ancho": 864,
+          "alto": 1536,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p2_v2_163616",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 2 of 5 (Plano medio), frozen in the middle of the action.\nFraming: MEDIUM shot. The whole animal is visible with space around it, filling about half of the frame.\nNew shot: Vertical 9:16, medium shot, Sony FX3 with 35mm lens, soft aquarium side lighting, the fish fans its large dorsal and tail fins wide while swimming slowly among dark volcanic rocks, clean green plants in the background.\nAction (in Spanish), it must be clearly visible: \"las aletas se abren amplias\".\nWhat we see (in Spanish): \"El pez nada tranquilo entre rocas oscuras y plantas acuáticas de fondo\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nKeep the animal's real colors: the light must not tint its body (a white body stays white).\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals, ice cubes or gems on the ground.",
+          "semilla": 243,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": false,
+          "modalSegundos": 98.2
+        },
+        {
+          "version": 3,
+          "archivo": "plano-2_v3.png",
+          "motor": "qwen",
+          "resultado": "ok",
+          "motivo": "",
+          "inicio": "2026-11-10T19:38:25.568Z",
+          "fin": "2026-11-10T19:40:06.967Z",
+          "segundos": 101,
+          "costoUsd": 0.0702,
+          "nota": "el pez nada hacia la derecha con la aleta dorsal y la cola completamente abiertas, como un abanico",
+          "dondeAparecio": "carpeta",
+          "ancho": 864,
+          "alto": 1536,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p2_v3_163825",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 2 of 5 (Plano medio), frozen in the middle of the action.\nFraming: MEDIUM shot. The whole animal is visible with space around it, filling about half of the frame.\nNew shot: Vertical 9:16, medium shot, Sony FX3 with 35mm lens, soft aquarium side lighting, the fish fans its large dorsal and tail fins wide while swimming slowly among dark volcanic rocks, clean green plants in the background.\nAction (in Spanish), it must be clearly visible: \"las aletas se abren amplias\".\nWhat we see (in Spanish): \"El pez nada tranquilo entre rocas oscuras y plantas acuáticas de fondo\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nKeep the animal's real colors: the light must not tint its body (a white body stays white).\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals, ice cubes or gems on the ground.\nRequested change from the owner (in Spanish): \"el pez nada hacia la derecha con la aleta dorsal y la cola completamente abiertas, como un abanico\". Apply it, and keep the same animal.",
+          "semilla": 244,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": false,
+          "modalSegundos": 98.3
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "tiempo": "9,0-13,5 s",
+      "tipo": "Plano primer plano",
+      "movimiento": "los ojos siguen la cámara",
+      "queSeVe": "Acercamiento al rostro del pez destacando el iris naranja y sus escamas perladas",
+      "actual": "plano-3_v1.png",
+      "intentos": [
+        {
+          "version": 1,
+          "archivo": "plano-3_v1.png",
+          "motor": "qwen",
+          "resultado": "ok",
+          "motivo": "",
+          "inicio": "2026-11-10T19:10:10.565Z",
+          "fin": "2026-11-10T19:11:54.474Z",
+          "segundos": 104,
+          "costoUsd": 0.0717,
+          "nota": "",
+          "dondeAparecio": "carpeta",
+          "ancho": 864,
+          "alto": 1536,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p3_v1_161010",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 3 of 5 (Plano primer plano), frozen in the middle of the action.\nNew shot: Vertical 9:16, extreme macro shot, Sony FX3 with 85mm macro lens, sharp overhead aquarium light, the fish moves its eye and head following the perspective, showing detailed iridescent scales and vibrant orange iris.\nAction (in Spanish), it must be clearly visible: \"los ojos siguen la cámara\".\nWhat we see (in Spanish): \"Acercamiento al rostro del pez destacando el iris naranja y sus escamas perladas\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals or gems on the ground.",
+          "semilla": 342,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": false,
+          "modalSegundos": 100.3
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "tiempo": "13,5-18,0 s",
+      "tipo": "Plano general",
+      "movimiento": "el pez cruza el tanque",
+      "queSeVe": "El óscar recorre todo el ancho del acuario con movimientos elegantes y seguros",
+      "actual": "plano-4_v3.png",
+      "intentos": [
+        {
+          "version": 1,
+          "archivo": "plano-4_v1.png",
+          "motor": "qwen",
+          "resultado": "ok",
+          "motivo": "",
+          "inicio": "2026-11-10T19:11:54.542Z",
+          "fin": "2026-11-10T19:13:37.829Z",
+          "segundos": 103,
+          "costoUsd": 0.0715,
+          "nota": "",
+          "dondeAparecio": "carpeta",
+          "ancho": 864,
+          "alto": 1536,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p4_v1_161154",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 4 of 5 (Plano general), frozen in the middle of the action.\nNew shot: Vertical 9:16, wide shot, Sony FX3 with 35mm lens, natural daylight simulation from above, the fish crosses smoothly from left to right across the entire width of the large aquarium, majestic posture.\nAction (in Spanish), it must be clearly visible: \"el pez cruza el tanque\".\nWhat we see (in Spanish): \"El óscar recorre todo el ancho del acuario con movimientos elegantes y seguros\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals or gems on the ground.",
+          "semilla": 442,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": false,
+          "modalSegundos": 100.4
+        },
+        {
+          "version": 2,
+          "archivo": "plano-4_v2.png",
+          "motor": "qwen",
+          "resultado": "ok",
+          "motivo": "",
+          "inicio": "2026-11-10T19:24:32.444Z",
+          "fin": "2026-11-10T19:27:23.709Z",
+          "segundos": 171,
+          "costoUsd": 0.1188,
+          "nota": "",
+          "dondeAparecio": "carpeta",
+          "ancho": 864,
+          "alto": 1536,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p4_v2_162432",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 4 of 5 (Plano general), frozen in the middle of the action.\nFraming: WIDE shot. The animal is SMALL in the frame (about one fifth of the image width) and we see the whole environment around it.\nNew shot: Vertical 9:16, wide shot, Sony FX3 with 35mm lens, natural daylight simulation from above, the fish crosses smoothly from left to right across the entire width of the large aquarium, majestic posture.\nAction (in Spanish), it must be clearly visible: \"el pez cruza el tanque\".\nWhat we see (in Spanish): \"El óscar recorre todo el ancho del acuario con movimientos elegantes y seguros\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nKeep the animal's real colors: the light must not tint its body (a white body stays white).\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals, ice cubes or gems on the ground.",
+          "semilla": 443,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": false,
+          "modalSegundos": 96.8
+        },
+        {
+          "version": 3,
+          "archivo": "plano-4_v3.png",
+          "motor": "qwen",
+          "resultado": "ok",
+          "motivo": "",
+          "inicio": "2026-11-10T19:34:34.652Z",
+          "fin": "2026-11-10T19:36:16.066Z",
+          "segundos": 101,
+          "costoUsd": 0.0701,
+          "nota": "",
+          "dondeAparecio": "carpeta",
+          "ancho": 864,
+          "alto": 1536,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p4_v3_163434",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 4 of 5 (Plano general), frozen in the middle of the action.\nFraming: WIDE shot. The animal is SMALL in the frame (about one fifth of the image width) and we see the whole environment around it.\nNew shot: Vertical 9:16, wide shot, Sony FX3 with 35mm lens, natural daylight simulation from above, the fish crosses smoothly from left to right across the entire width of the large aquarium, majestic posture.\nAction (in Spanish), it must be clearly visible: \"el pez cruza el tanque\".\nWhat we see (in Spanish): \"El óscar recorre todo el ancho del acuario con movimientos elegantes y seguros\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nKeep the animal's real colors: the light must not tint its body (a white body stays white).\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals, ice cubes or gems on the ground.",
+          "semilla": 444,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": true,
+          "modalSegundos": 98.4
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "tiempo": "18,0-22,5 s",
+      "tipo": "Plano detalle",
+      "movimiento": "las burbujas suben rápido",
+      "queSeVe": "Primer plano lateral del pez quieto frente a finas burbujas que ascienden por el agua cristalina",
+      "actual": "plano-5_v2.png",
+      "intentos": [
+        {
+          "version": 1,
+          "archivo": "plano-5_v1.png",
+          "motor": "qwen",
+          "resultado": "ok",
+          "motivo": "",
+          "inicio": "2026-11-10T19:13:37.977Z",
+          "fin": "2026-11-10T19:15:21.636Z",
+          "segundos": 104,
+          "costoUsd": 0.0715,
+          "nota": "",
+          "dondeAparecio": "carpeta",
+          "ancho": 864,
+          "alto": 1536,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p5_v1_161337",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 5 of 5 (Plano detalle), frozen in the middle of the action.\nNew shot: Vertical 9:16, close-up shot, Sony FX3 with 85mm macro lens, bright background lighting, fine air bubbles rise rapidly past the fish as it holds position in the water column, glowing copper scales.\nAction (in Spanish), it must be clearly visible: \"las burbujas suben rápido\".\nWhat we see (in Spanish): \"Primer plano lateral del pez quieto frente a finas burbujas que ascienden por el agua transparente\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals or gems on the ground.",
+          "semilla": 542,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": false,
+          "modalSegundos": 100.3
+        },
+        {
+          "version": 2,
+          "archivo": "plano-5_v2.png",
+          "motor": "qwen",
+          "resultado": "ok",
+          "motivo": "",
+          "inicio": "2026-11-10T19:27:23.886Z",
+          "fin": "2026-11-10T19:29:05.181Z",
+          "segundos": 101,
+          "costoUsd": 0.0702,
+          "nota": "",
+          "dondeAparecio": "carpeta",
+          "ancho": 864,
+          "alto": 1536,
+          "conversationId": "",
+          "carpetaTrabajo": "_trabajo/qwen/2026-11-10_1604_pez-oscar-albino-cobre-se-mueve_p5_v2_162723",
+          "prompt": "Create a NEW photograph of the same living animal shown in the picture. Keep ONLY its identity: same species, same body colors and the same markings or spots. Do NOT copy its pose, its camera angle, its framing or the background of the picture: reposition the animal for this new shot.\nThe animal (in Spanish): \"Pez Óscar Albino Cobre, de cuerpo robusto color blanco perlado, grandes aletas traslúcidas y llamativas manchas anaranjadas y cobrizas en los flancos y cabeza, con ojos anaranjados brillantes.\".\nShot 5 of 5 (Plano detalle), frozen in the middle of the action.\nFraming: DETAIL shot, very close to the part of the animal named in the action.\nNew shot: Vertical 9:16, close-up shot, Sony FX3 with 85mm macro lens, bright background lighting, fine air bubbles rise rapidly past the fish as it holds position in the water column, glowing copper scales.\nAction (in Spanish), it must be clearly visible: \"las burbujas suben rápido\".\nWhat we see (in Spanish): \"Primer plano lateral del pez quieto frente a finas burbujas que ascienden por el agua transparente\".\nSame in every shot of this reel: Albino oscar cichlid with pearl-white body, bright orange eyes, and copper-orange spots on flanks and fins; lush planted aquarium with dark stones; clear water.\nKeep the animal's real colors: the light must not tint its body (a white body stays white).\nVertical 9:16 photorealistic still frame from a nature video. No text, letters, logos or watermarks. No people, no hands, no collage, no borders. No glass crystals, ice cubes or gems on the ground.",
+          "semilla": 543,
+          "pasos": 40,
+          "recorteVersion": 1,
+          "frio": false,
+          "modalSegundos": 98.4
+        }
+      ]
+    }
+  ],
+  "costoTotalUsd": 1.472,
+  "recorte": {
+    "archivo": "referencias/ref-recorte.png",
+    "version": 1,
+    "origen": "referencias/ref-1.jpg",
+    "caja": {
+      "x": 0.2988,
+      "y": 0.1994,
+      "w": 0.4023,
+      "h": 0.5997
+    },
+    "ancho": 1024,
+    "alto": 1024,
+    "editadoAMano": true,
+    "detectado": null,
+    "historial": []
+  },
+  "costos": [
+    {
+      "tipo": "qwen",
+      "plano": 1,
+      "usd": 0.1611,
+      "fecha": "2026-11-10T19:08:27.112Z"
+    },
+    {
+      "tipo": "qwen",
+      "plano": 2,
+      "usd": 0.0716,
+      "fecha": "2026-11-10T19:10:10.560Z"
+    },
+    {
+      "tipo": "qwen",
+      "plano": 3,
+      "usd": 0.0717,
+      "fecha": "2026-11-10T19:11:54.539Z"
+    },
+    {
+      "tipo": "qwen",
+      "plano": 4,
+      "usd": 0.0715,
+      "fecha": "2026-11-10T19:13:37.971Z"
+    },
+    {
+      "tipo": "qwen",
+      "plano": 5,
+      "usd": 0.0715,
+      "fecha": "2026-11-10T19:15:21.697Z"
+    },
+    {
+      "tipo": "espera_gpu",
+      "usd": 0.0417,
+      "fecha": "2026-11-10T19:15:21.699Z"
+    },
+    {
+      "tipo": "qwen",
+      "plano": 2,
+      "usd": 0.3333,
+      "fecha": "2026-11-10T19:24:32.408Z"
+    },
+    {
+      "tipo": "espera_gpu",
+      "usd": 0.0417,
+      "fecha": "2026-11-10T19:24:32.413Z"
+    },
+    {
+      "tipo": "qwen",
+      "plano": 4,
+      "usd": 0.1188,
+      "fecha": "2026-11-10T19:27:23.862Z"
+    },
+    {
+      "tipo": "espera_gpu",
+      "usd": 0.0417,
+      "fecha": "2026-11-10T19:27:23.863Z"
+    },
+    {
+      "tipo": "qwen",
+      "plano": 5,
+      "usd": 0.0702,
+      "fecha": "2026-11-10T19:29:05.245Z"
+    },
+    {
+      "tipo": "espera_gpu",
+      "usd": 0.0417,
+      "fecha": "2026-11-10T19:29:05.245Z"
+    },
+    {
+      "tipo": "qwen",
+      "plano": 4,
+      "usd": 0.0701,
+      "fecha": "2026-11-10T19:36:16.140Z"
+    },
+    {
+      "tipo": "espera_gpu",
+      "usd": 0.0417,
+      "fecha": "2026-11-10T19:36:16.145Z"
+    },
+    {
+      "tipo": "qwen",
+      "plano": 2,
+      "usd": 0.0701,
+      "fecha": "2026-11-10T19:37:57.479Z"
+    },
+    {
+      "tipo": "espera_gpu",
+      "usd": 0.0417,
+      "fecha": "2026-11-10T19:37:57.480Z"
+    },
+    {
+      "tipo": "qwen",
+      "plano": 2,
+      "usd": 0.0702,
+      "fecha": "2026-11-10T19:40:07.036Z"
+    },
+    {
+      "tipo": "espera_gpu",
+      "usd": 0.0417,
+      "fecha": "2026-11-10T19:40:07.038Z"
+    }
+  ]
+}
