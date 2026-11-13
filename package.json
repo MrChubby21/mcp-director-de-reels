@@ -25,7 +25,8 @@
     "setup": "node instalador/setup.mjs",
     "construir-instaladores": "node instalador/construir.mjs",
     "diagnostico": "node scripts/diagnostico.mjs",
-    "probar-director": "node scripts/probar-director.mjs"
+    "probar-director": "node scripts/probar-director.mjs",
+    "probar-ejemplo": "node scripts/probar-ejemplo.mjs"
   },
   "keywords": [
     "mcp",

@@ -19,6 +19,30 @@ Autor: Max Deik. Hecho a partir del [mcp-starter-kit](https://github.com/Maurich
 | [DECLARACION-IA-Y-SEGURIDAD.md](DECLARACION-IA-Y-SEGURIDAD.md) | Uso de IA, límites conocidos y seguridad |
 | [BITACORA.md](BITACORA.md) | Trazabilidad: cada paso con su comando, la salida real y los errores resueltos |
 
+## Para quien corrige (persona o agente): 3 comandos, 1 minuto
+
+No necesitas la app Director de Reels ni ninguna clave. Funciona en Mac, Windows o Linux con Node 18+:
+
+```bash
+git clone https://github.com/MrChubby21/mcp-director-de-reels.git && cd mcp-director-de-reels
+npm install && npm run build && npm test     # -> "OK: 6 herramientas" y "Prueba de humo superada."
+npm run probar-ejemplo                       # -> 9 líneas OK y "Prueba sin la app superada."
+```
+
+`probar-ejemplo` usa 2 reels reales de `ejemplo/` y simula la app cerrada. Comprueba que las 6 herramientas existen, que `listar_reels` lee los reels y filtra por palabras, que las otras 5 responden "apagado" sin colgarse y que las entradas malas se rechazan. **No abre ventanas ni gasta dinero.**
+
+`npm run probar-director` es la prueba contra la app encendida y solo pasa en el computador del autor. Su salida real está en [DEMO.md](DEMO.md), en el [video](docs/video/demo-opencode.mp4) y en [BITACORA.md](BITACORA.md).
+
+Crear fotos no es parte del MCP, a propósito: cada foto tarda minutos y cuesta dinero (Modal). La evidencia de las fotos son los storyboards de `ejemplo/` y el video.
+
+| Criterio de la pauta | Dónde está |
+|---|---|
+| Funcionamiento | `src/tools/director_reels.ts` (6 herramientas), `npm test`, `npm run probar-ejemplo` |
+| Utilidad académica | [UTILIDAD-ACADEMICA.md](UTILIDAD-ACADEMICA.md) (1 página, Marketing II) |
+| Demostración antes y después | [DEMO.md](DEMO.md) y [video de 35 s](docs/video/demo-opencode.mp4) |
+| Publicación en GitHub | Este README, el historial de commits y la búsqueda de claves (0 resultados), en [DECLARACION-IA-Y-SEGURIDAD.md](DECLARACION-IA-Y-SEGURIDAD.md) |
+| Responsabilidad y documentación | [DECLARACION-IA-Y-SEGURIDAD.md](DECLARACION-IA-Y-SEGURIDAD.md), `opencode.json` (`permission`) y [BITACORA.md](BITACORA.md) |
+
 ## Herramientas
 
 | Herramienta | Qué hace | ¿Cambia algo? |
@@ -81,17 +105,17 @@ El MCP no hace clics ni toca el código de la app. Le habla a la API HTTP que la
 La app es mía y no está en este repositorio. Para que igual puedas ver el MCP con datos reales, la carpeta `ejemplo/reels-creados/` trae **2 reels reales** del Director (su `meta.json` y su storyboard, con fotos achicadas):
 
 ```bash
-DIRECTOR_REELS_DIR=./ejemplo/reels-creados npm run probar-director
+npm run probar-ejemplo
 ```
 
-Con eso, `listar_reels` muestra los 2 reels con su título, planos, fotos y costo, y el storyboard se puede abrir a mano en `ejemplo/reels-creados/<reel>/storyboard/storyboard.html`. Las herramientas que necesitan la app responden *"El Director de Reels esta apagado"*, y la prueba termina diciendo cuántas fallaron por eso. Para opencode: `DIRECTOR_REELS_DIR=./ejemplo/reels-creados opencode`.
+Con eso, `listar_reels` muestra los 2 reels con su título, planos, fotos y costo, y las herramientas que necesitan la app responden *"El Director de Reels esta apagado"* sin colgarse. La prueba termina con `Prueba sin la app superada.`. El storyboard se puede abrir a mano en `ejemplo/reels-creados/<reel>/storyboard/storyboard.html`. Para opencode en Mac o Linux: `DIRECTOR_REELS_DIR=./ejemplo/reels-creados opencode`.
 
 En resumen, sin la app:
 
 | Paso | ¿Se puede repetir? |
 |---|---|
 | 1 a 3 (`npm install`, `npm run build`, `npm test`) | Sí, completos |
-| 4 (`npm run probar-director`) | Corre, pero las herramientas que usan la API responden *"El Director de Reels esta apagado"* y la prueba termina diciendo cuántas fallaron. Así se comprueba que el MCP no se cuelga sin la app |
+| 4 | Usa `npm run probar-ejemplo` en vez de `probar-director`: pasa completa sin la app |
 | 5 (opencode) | El MCP aparece conectado. Con la carpeta de ejemplo, `listar_reels` responde con los 2 reels; las demás herramientas dicen que la app está apagada |
 
 Este repositorio sirve además como ejemplo de cómo conectar un MCP a cualquier app con una API HTTP local: se cambia `DIRECTOR_URL` y las rutas que llama `src/tools/director_reels.ts`.
@@ -108,7 +132,7 @@ Este repositorio parte del kit del profesor y conserva sus archivos, por si algu
 | `docs/` (salvo `docs/img/`) | Guías del kit; su README original está en `docs/KIT-ORIGINAL-README.md` |
 | `src/tools/_ejemplo.ts`, `src/tools/_aplicaciones.ts` | Herramientas de ejemplo del kit, desactivadas |
 
-Lo propio de este MCP: `src/tools/director_reels.ts`, `scripts/probar-director.mjs`, `ejemplo/` y los documentos de la raíz.
+Lo propio de este MCP: `src/tools/director_reels.ts`, `scripts/probar-director.mjs`, `scripts/probar-ejemplo.mjs`, `ejemplo/` y los documentos de la raíz.
 
 ### Configuración opcional
 

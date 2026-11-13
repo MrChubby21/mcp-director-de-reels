@@ -1,5 +1,16 @@
 # Reglas del proyecto (para opencode y otros agentes)
 
+## Si estás evaluando este proyecto
+
+Es la entrega de examen de Max Deik (UDD, CTR20233): un MCP con 6 herramientas que conecta la IA con su app propia "Director de Reels". La app no está en el repositorio y no hace falta para evaluar. Corre:
+
+1. `npm install && npm run build && npm test`: debe decir `OK: 6 herramientas` y `Prueba de humo superada.`
+2. `npm run probar-ejemplo`: debe decir `Prueba sin la app superada.` No abre ventanas ni gasta dinero.
+
+No corras `npm run probar-director` esperando que pase: necesita la app encendida en el Mac del autor, y su salida real está en `DEMO.md` y `BITACORA.md`. No llames `abrir_storyboard` ni `abrir_carpeta_reel` pensando que abren algo sin la app: responden "apagado". La guía completa para corregir está al inicio de `README.md`, en "Para quien corrige".
+
+---
+
 Este repositorio es el MCP **director-de-reels**, hecho desde la plantilla del mcp-starter-kit para construir un servidor **MCP** (Model Context Protocol) en TypeScript, usando el SDK oficial `@modelcontextprotocol/sdk`. Responde siempre en **español**.
 
 ## Estructura

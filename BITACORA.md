@@ -116,3 +116,4 @@ El Constructor terminó todas sus etapas (`preparar → analizar → revisar →
     - Segunda vez: solo `listar_reels`, `estado_director` y `ver_reel`, en 19 s.
     - Las dos veces concluyó lo mismo: objetivo "deseo", los 5 planos son coherentes y el plano 5 es el más débil (el pez está quieto y el foco pasa a las burbujas).
   - Tiempos y llamadas del video calzados con DEMO y la utilidad académica. El README aclara qué responde opencode con la carpeta de ejemplo. La declaración menciona el nombre de usuario visible en el video.
+- Preparado para que lo corrija un agente: `npm run probar-ejemplo` (`scripts/probar-ejemplo.mjs`) prueba el MCP sin la app, con los 2 reels de `ejemplo/` y la API apuntando a un puerto vacío. Resultado: 9 líneas OK, `Prueba sin la app superada.`. El README tiene arriba "Para quien corrige" (3 comandos y en qué archivo está cada criterio), y `AGENTS.md` tiene al inicio las instrucciones para un agente evaluador.
