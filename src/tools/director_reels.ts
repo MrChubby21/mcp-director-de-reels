@@ -306,7 +306,8 @@ export function register(server: McpServer): void {
       description:
         "Consulta cuanto se ha gastado este mes en Modal, el servicio que genera las fotos del Director. Usala cuando el usuario pregunte por costos o gasto. Solo lee, no gasta nada.",
       inputSchema: {},
-      annotations: { readOnlyHint: true, openWorldHint: false },
+      // La app consulta a Modal por internet (modal billing summary): por eso openWorldHint es true.
+      annotations: { readOnlyHint: true, openWorldHint: true },
     },
     async () => {
       const r = await pedir("/api/modal/gasto", undefined, 30);

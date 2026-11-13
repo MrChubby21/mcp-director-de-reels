@@ -1,11 +1,11 @@
 {
   "name": "mcp-director-de-reels",
-  "version": "1.1.2",
+  "version": "1.0.0",
   "description": "MCP que conecta la IA con mi app Director de Reels (hecho desde el mcp-starter-kit del curso CTR20233)",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "mcp-starter-kit": "dist/index.js"
+    "mcp-director-de-reels": "dist/index.js"
   },
   "engines": {
     "node": ">=18"
@@ -31,7 +31,7 @@
     "mcp",
     "model-context-protocol",
     "opencode",
-    "starter"
+    "director-de-reels"
   ],
   "license": "MIT",
   "dependencies": {
