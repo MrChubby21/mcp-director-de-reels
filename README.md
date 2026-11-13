@@ -20,9 +20,9 @@ Autor: Max Deik. Hecho a partir del [mcp-starter-kit](https://github.com/Maurich
 | `estado_director` | Revisa si la app está abierta, si tiene clave para guiones y si el motor de fotos está disponible | No, solo lee |
 | `listar_reels` | Lista los reels del más nuevo al más viejo (título, fecha, planos, fotos, costo). Filtra por palabras del título | No, solo lee |
 | `ver_reel` | Muestra el guion de un reel plano por plano: tiempo, tipo de plano, movimiento y foto actual | No, solo lee |
-| `abrir_storyboard` | Abre en el navegador el storyboard del reel (una foto por plano) | Abre una ventana |
+| `abrir_storyboard` | Abre en el navegador el storyboard del reel (una foto por plano) | Abre una ventana, y la app rehace `storyboard.html` desde `meta.json` |
 | `abrir_carpeta_reel` | Abre en el Finder la carpeta del reel | Abre una ventana |
-| `gasto_modal` | Dice cuánto se ha gastado este mes en Modal, el servicio que genera las fotos | No, solo lee |
+| `gasto_modal` | Dice cuánto se ha gastado este mes en Modal, el servicio que genera las fotos | No, solo lee (la app le consulta a Modal por internet) |
 
 El kit trae además dos herramientas de ejemplo del profesor (`listar_aplicaciones` y `abrir_aplicacion`), que se dejaron tal cual.
 
@@ -40,9 +40,9 @@ El MCP no hace clics ni toca el código de la app. Le habla a la API HTTP que la
 ## Requisitos
 
 - **macOS** (las herramientas que abren ventanas usan el Finder y el navegador del Mac).
-- **Node.js 20 o superior** y **npm**.
+- **Node.js 18 o superior** y **npm** (probado con Node 20).
 - **La app Director de Reels encendida** en el mismo computador (servidor en el puerto 8895). Sin la app, `listar_reels` igual funciona si existe la carpeta de reels, y las demás herramientas responden "el Director está apagado" sin colgarse.
-- Un cliente MCP: [opencode](https://opencode.ai) (es el que se usó), Claude Desktop, Cursor u otro.
+- Un cliente MCP: [opencode](https://opencode.ai) (es el que se usó), Claude Desktop, Cursor u otro. Si no tienes opencode, el kit lo instala con `npm run instalar-ia`, o se instala desde su página.
 
 ## Instalación paso a paso
 
@@ -60,7 +60,7 @@ El MCP no hace clics ni toca el código de la app. Le habla a la API HTTP que la
    ```bash
    npm test
    ```
-4. Abre la app Director de Reels y corre la prueba real. Llama a las 6 herramientas contra la app encendida y debe terminar con `Prueba del Director superada.`:
+4. Abre la app Director de Reels y corre la prueba real. Llama a las 6 herramientas contra la app encendida (las dos que abren ventanas, con un reel que no existe, para no abrir nada) y debe terminar con `Prueba del Director superada.`:
    ```bash
    npm run probar-director
    ```
@@ -69,6 +69,18 @@ El MCP no hace clics ni toca el código de la app. Le habla a la API HTTP que la
    opencode
    ```
    Si quieres usar el modelo gratis con el que se probó: `opencode -m opencode/big-pickle`.
+
+### Si no tienes la app Director de Reels
+
+La app es mía y no está en este repositorio, así que sin ella:
+
+| Paso | ¿Se puede repetir? |
+|---|---|
+| 1 a 3 (`npm install`, `npm run build`, `npm test`) | Sí, completos |
+| 4 (`npm run probar-director`) | Corre, pero las herramientas que usan la API responden *"El Director de Reels esta apagado"* y la prueba termina diciendo cuántas fallaron. Así se comprueba que el MCP no se cuelga sin la app |
+| 5 (opencode) | El MCP aparece conectado; las respuestas dirán que la app está apagada |
+
+Este repositorio sirve además como ejemplo de cómo conectar un MCP a cualquier app con una API HTTP local: se cambia `DIRECTOR_URL` y las rutas que llama `src/tools/director_reels.ts`.
 
 ### Configuración opcional
 

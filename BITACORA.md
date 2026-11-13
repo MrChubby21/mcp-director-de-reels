@@ -88,3 +88,15 @@ El Constructor terminó todas sus etapas (`preparar → analizar → revisar →
   - *"Abre el storyboard del pez oscar y dime qué movimiento tiene cada plano"* → `abrir_storyboard` y `ver_reel`, 12 s.
   - Salidas completas en `DEMO.md`.
 - Búsqueda de claves y datos personales en los archivos del repositorio antes de publicar: 0 resultados.
+- Revisión independiente del repositorio (otro agente, con pruebas reales). Encontró 9 problemas, todos corregidos:
+  1. `probar-director` no le pasaba `DIRECTOR_URL` ni `DIRECTOR_REELS_DIR` al MCP, así que la prueba "con la app cerrada" no se podía repetir. Ahora pasa el entorno: con `DIRECTOR_URL=http://127.0.0.1:8899` las herramientas responden "esta apagado" y `listar_reels` sigue leyendo el disco.
+  2. La prueba llamaba solo a 3 herramientas. Ahora hace 9 llamadas a las 6 (las dos de abrir, con un ID que no existe, para no abrir ventanas).
+  3. Los tiempos no coincidían entre documentos: quedaron los de esta sección.
+  4. El README no explicaba qué hacer sin la app. Se agregó una sección para ese caso y cómo instalar opencode.
+  5. No se declaraba que `abrir_storyboard` hace que la app rehaga `storyboard.html`. Quedó en el README y en la declaración.
+  6. `gasto_modal` decía no salir a internet, pero la app le consulta a Modal. Ahora tiene `openWorldHint: true`.
+  7. La versión de Node no coincidía entre el README y `package.json`.
+  8. `package.json` tenía datos del kit; ahora es `mcp-director-de-reels` 1.0.0.
+  9. A la utilidad académica le faltaba respaldo para un ejemplo; está abajo.
+- Respaldo del ejemplo de la utilidad académica: el 10-nov, revisando los storyboards del pez óscar, noté que el pez salía en la misma pose en todos los planos y que tres planos eran muy parecidos. Se corrigió en la app: cada plano con pose y ángulo distintos. El reel `2026-11-10_1706_pez-oscar-cobre-angulos-distintos` es el resultado, y es el que aparece en `DEMO.md`.
+

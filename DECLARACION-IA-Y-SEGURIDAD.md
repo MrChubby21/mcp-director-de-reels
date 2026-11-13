@@ -30,13 +30,14 @@
 ## Seguridad
 
 - **Sin claves en el repositorio.** `.gitignore` excluye `.env`, y antes de publicar se buscaron en los archivos patrones de claves (`sk-`, `nvapi-`, `ghp_`, `gho_`, `AIza`) y datos personales: 0 resultados. La clave de NVIDIA vive solo en la configuración local de opencode, fuera de esta carpeta.
-- **Ninguna herramienta gasta dinero ni borra nada.** Crear guiones o fotos (Gemini y Modal) quedó fuera a propósito.
+- **Ninguna herramienta gasta dinero ni borra nada.** Crear guiones o fotos (Gemini y Modal) quedó fuera a propósito. Lo único que se escribe en disco: al abrir un storyboard, la app rehace `storyboard.html` y sus copias de fotos a partir de `meta.json`, sin tocar las fotos originales.
 - **Permisos acotados.**
   - Cuatro herramientas solo leen (`readOnlyHint: true`).
-  - Las dos que abren ventanas están marcadas como no destructivas (`destructiveHint: false`).
+  - Las dos que abren ventanas están marcadas como no destructivas (`destructiveHint: false`) y repetibles sin efecto extra (`idempotentHint: true`).
+  - `gasto_modal` está marcada con `openWorldHint: true`, porque la app le consulta a Modal por internet.
   - Mis 6 herramientas no ejecutan comandos del sistema: solo le hablan a la API local de la app y leen carpetas.
   - Las 2 herramientas de ejemplo del kit (`listar_aplicaciones` y `abrir_aplicacion`) sí abren apps, con `execFile` y sin shell, tal como vienen del profesor.
 - **Entradas revisadas.** zod valida cada parámetro antes de usarlo. El ID de un reel tiene que calzar con un formato fijo (`AAAA-MM-DD_HHMM_titulo`), así que no se puede pedir una ruta como `../../` para leer otros archivos. Un texto sin letras, como `???`, se rechaza.
-- **Solo conexiones locales.** Por defecto, el MCP se conecta únicamente a `http://127.0.0.1:8895`.
+- **El MCP solo se conecta a la app local.** Por defecto habla únicamente con `http://127.0.0.1:8895`. La única salida a internet es indirecta: para el gasto del mes, la app le pregunta a Modal.
 - **App propia.** Director de Reels es mi propia aplicación y tengo su código. No se conectó ninguna app de terceros, ni se saltó ninguna licencia.
 - **Sin datos personales.** Los reels son contenido de productos (peces, joyas). No hay datos de clientes.
