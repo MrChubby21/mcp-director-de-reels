@@ -1,7 +1,7 @@
 {
-  "name": "mcp-starter-kit",
+  "name": "mcp-director-de-reels",
   "version": "1.1.2",
-  "description": "Plantilla base para construir servidores MCP (Model Context Protocol) y usarlos con opencode, Claude Desktop, Cursor y otros clientes.",
+  "description": "MCP que conecta la IA con mi app Director de Reels (hecho desde el mcp-starter-kit del curso CTR20233)",
   "type": "module",
   "main": "dist/index.js",
   "bin": {

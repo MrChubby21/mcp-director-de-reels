@@ -1,11 +1,16 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
-    "mi-mcp": {
+    "director-de-reels": {
       "type": "local",
-      "command": ["node", "./dist/index.js"],
+      "command": [
+        "node",
+        "./dist/index.js"
+      ],
       "enabled": true,
       "timeout": 30000
     }
-  }
+  },
+  "model": "opencode/big-pickle",
+  "small_model": "opencode/big-pickle"
 }
